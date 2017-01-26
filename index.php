@@ -17,11 +17,9 @@ if($text == "Shop"){
 	$iframe_url = "http://gcreturn.buycraft.net/";
 }
 if($text == "Disclaimer"){
-	$box1 = "active";
 	$iframe_url = "/sites/" . $text . ".php";
 }
 if($text == "Impressum"){
-	$box1 = "active";
 	$iframe_url = "/sites/" . $text . ".php";
 }
 ?>
@@ -42,10 +40,6 @@ if($text == "Impressum"){
 	}
 	.fixed{
 		position: fixed;
-	}
-	.right{
-		float: right;
-		padding-right: 0px;
 	}
 	#mobile{
 		width: 950px;
@@ -110,34 +104,26 @@ if($text == "Impressum"){
 				</center>
 			</div>
 		</div>
-		<div id="buttons">
-			<center>
-				<div id="button_box_right">
+		<center>
+			<div id="buttons2">
 					<form action="/" method="POST">
-						<input type="submit" id="button-<?php echo $box1;?>" value="Startseite" style="width: 90px;">
+						<input type="submit" id="button-<?php echo $box1;?>" value="Startseite" style="width: 90px; float: left">
 						<input type="hidden" name="site" value="Startseite">
 					</form>
-				</div>
-				<div id="button_box_right">
 					<form action="/" method="POST">
-						<input type="submit" id="button-<?php echo $box3;?>" value="Forum" style="width: 90px;">
+						<input type="submit" id="button-<?php echo $box3;?>" value="Forum" style="width: 90px; float: right;">
 					</form>
-				</div>
-				<div id="button_box_right">
 					<form action="http://shop.gamerkammer.net" method="POST">
 						<input type="submit" id="button-<?php echo $box2;?>" value="Shop" style="width: 90px;">
 						<input type="hidden" name="site" value="Shop">
 					</form>
-				</div>
-			</center>
-		</Div>
-		<br>
-	</div>
-	<center><div id="site">
-		<iframe src="<?php echo $iframe_url;?>" height="100%<!--2798px -->" width="100%" style="border: none;"> 
-		
-		</iframe>
-	</div></center>
+			</div>
+			<div id="site">
+				<iframe src="<?php echo $iframe_url;?>" height="100%" width="100%" style="border: none;"> 
+					<p><br><br><br><br><br><br><br>Your Browser dosen't support our website!</p>
+				</iframe>
+			</div>
+	</center>
 	<form name="sub_Disclaimer" action="/" method="POST">
 		<input type="hidden" name="site" value="Disclaimer"> 
 	</form>
